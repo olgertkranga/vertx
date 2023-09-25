@@ -1,5 +1,6 @@
 package com.temperaturesensors2.tempo;
 
+import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
 
 import org.springframework.boot.SpringApplication;
@@ -10,12 +11,13 @@ public class TempoApplication {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello Bankier Olegs 2!");
+		System.out.println("Hello Bankier Olegs!");
 
 		SpringApplication.run(TempoApplication.class, args);
 
 		Vertx vertx = Vertx.vertx();
-		vertx.deployVerticle(new SensorVerticle());
+		//vertx.deployVerticle(new SensorVerticle());
+		vertx.deployVerticle("SensorVerticle", new DeploymentOptions().setInstances(1));
 	}
 
 }
