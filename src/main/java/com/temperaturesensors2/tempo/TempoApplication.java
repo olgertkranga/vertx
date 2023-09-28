@@ -18,6 +18,9 @@ public class TempoApplication {
 	public static void main(String[] args) {
 		
 		//curl -H "X-Header: value" http://localhost:8080/data
+		//https://www.youtube.com/watch?v=VQpF6oTCxGI
+		//39:53
+		//48:20
 
 		System.out.println("Hello Bankier Olegs!");
 		SpringApplication.run(TempoApplication.class, args);
